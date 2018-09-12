@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item': true, 
+				'list-group-item-success': postLoveIts > 0,
+				'list-group-item-danger': postLoveIts < 0,
+				'': postLoveIts === 0 }">
+<h4 class = "pull-right" style = "color:grey;"><em>{{ postCreated | date: 'MM/dd/yyyy, hh:mm a' | uppercase  }} </em></h4>  
+<h2> <strong>{{ postTitle }}</strong>  </h2>
+<p>{{postContent}}</p>
+<div>
+<button class= "btn btn-success" (click)="addLike()">Love it </button> <button class= "btn btn-danger" (click)="delLike()">Don't love it</button>
+</div>
+</li> 
